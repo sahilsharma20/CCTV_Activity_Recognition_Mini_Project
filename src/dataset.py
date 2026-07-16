@@ -107,7 +107,11 @@ for folder in [TRAIN_FOLDER, TEST_FOLDER]:
         )
 
 frame_files = sorted(
-    os.listdir(PREPROCESSED_FOLDER)
+    [
+        file
+        for file in os.listdir(PREPROCESSED_FOLDER)
+        if file.endswith(".jpg")
+    ]
 )
 
 print("=" * 40)

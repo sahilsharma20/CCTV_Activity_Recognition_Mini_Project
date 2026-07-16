@@ -193,6 +193,7 @@ def main():
 
         draw_person(frame, x, y, activity, frame_number)
 
+        """
         # Display current activity
         cv2.putText(
             frame,
@@ -203,6 +204,7 @@ def main():
             (0, 0, 255),
             2
         )
+        """
 
         # Add CCTV noise
         noise = np.random.normal(0, 5, frame.shape).astype(np.int16)
